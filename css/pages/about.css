@@ -1,0 +1,100 @@
+/* About Page  */
+/* Section 1 */
+.initial-landing-about {
+  background-image: url("/assets/images/about/LMI\ Shop\ 1\ 1.webp");
+  background-position: center;
+  background-size: cover;
+}
+
+.corporate-facility-section {
+  background: linear-gradient(to bottom, #939393 60%, #D9D9D9 40%);
+  padding: 4%;
+  overflow-x: hidden;
+
+}
+
+.corporate-facility-section>div:nth-of-type(1) {
+  gap: 3.5%;
+}
+
+
+.corporate-facility-section>div:nth-of-type(2) {
+  margin-top: 3.5%;
+  gap: 4%;
+  position: relative;
+  left: 5%;
+}
+
+@media(max-width: 1821px) {
+  .corporate-facility-section>div:nth-of-type(2) {
+    left: 0%;
+  }
+}
+/* Section 2 */
+.section-2-about h1 {
+  max-width: 30%;
+}
+
+.section-2-about h2 {
+  max-width: 33%;
+}
+
+/* Section 3 */
+.section-3-about p {
+  max-width: 750px !important;
+}
+
+/* Section 4 */
+.section-4-about img {
+  width: 100%; 
+  display: block;
+  object-fit: cover !important;
+}
+
+/* Section 5 */
+.section-5-about p {
+  max-width: 750px !important;
+}
+
+/* Section 6 */
+.section-6-about {
+  background-color: #4A5509;
+  padding-inline: 9%;
+  padding-top: 4%;
+  padding-bottom: 3%;
+}
+
+.section-6-about h2 {
+  max-width: 729px; 
+  margin-bottom: 7%
+}
+
+
+/* Section 7  */
+.section-7-about h2 {
+  max-width: 30%;
+}
+
+.section-7-about .team-line div {
+  width: 150px; 
+  background-color: #4A5509; 
+  height: 2px; 
+  opacity: 1;
+}
+
+.section-7-about a {
+  display: inline-flex;
+  padding-inline: 7%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  border: 1px solid #000000;
+  margin-inline: auto;
+  width: 40%;
+  max-width: 370px;
+}
+
+.corporate-facility-section .warehouse-description{
+  max-width: 416px;
+}
+
+

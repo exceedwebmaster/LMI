@@ -1,0 +1,34 @@
+/* Contact Page */
+/* Section 1 */
+.initial-landing-contact {
+  background-image: url("/assets/images/contact/image\ \(15\).webp");
+  background-position: center;
+  background-size: cover;
+}
+
+.section-2-contacts h1 {
+  max-width: 40%;
+  
+}
+
+.section-3-contacts iframe {
+  height: 60vh; 
+  border-radius: 10px !important;
+}
+
+.section-4-contacts hr {
+  max-width: 400px
+}
+
+@media(max-width: 1199px) {
+  .contact-body {
+    margin-top: 170px !important;
+  }
+}
+
+@media(max-width: 576px) {
+  .contact-body {
+    margin-top: 140px !important;
+  }
+}
+
