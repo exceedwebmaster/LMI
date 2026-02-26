@@ -27,28 +27,11 @@
 
 
 
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-<script>
-  // Initialize AOS (Animate On Scroll) with consistent settings for all elements using data-aos="..."
-  AOS.init({
-    once: true,
-    duration: 700,
-    offset: 180,
-    easing: "ease-out",
-    mirror: false
-  });
-
-  // Recalculate AOS positions after the whole page (images/fonts) finishes loading
-  window.addEventListener("load", () => {
-    AOS.refreshHard();
-  });
-</script>
-
 
 <body>
   <div id="site-navbar"></div>
 
-  <section class="initial-landing-enclosures vh-100 w-100" data-aos="fade-down"></section>
+<section class="initial-landing-enclosures vh-100 w-100" data-aos="fade-down"></section>
 
   <section class="section-2-enclosures smaller-max-width m-auto mt-2 mt-md-3 mt-lg-5 p-4 p-xl-5 max-width-1920"
     data-aos="fade-right">
@@ -393,10 +376,7 @@
 
     </div>
   </section>
-
-  <div id="site-footer"></div>
-
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
     integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
     crossorigin="anonymous"></script>
 
@@ -421,6 +401,9 @@
   </script>
 
   <script src="/js/script.js"></script>
+
+  <div id="site-footer"></div>
+
 </body>
 
 </html>

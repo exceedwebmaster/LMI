@@ -42,9 +42,8 @@ function getCurrentPageFile() {
 
 async function fetchPartialWithFallback(filename) {
   const candidates = [
-    `/components/${filename}`,
-    `../components/${filename}`,
     `components/${filename}`,
+    `../components/${filename}`,
   ];
 
   let lastError;
@@ -305,9 +304,7 @@ async function injectSharedComponents() {
     applyScrollPadding();
     scrollToHashWithOffset();
 
-    if (typeof AOS !== 'undefined' && typeof AOS.refreshHard === 'function') {
-      requestAnimationFrame(() => AOS.refreshHard());
-    }
+    if (window.AOS) AOS.refreshHard();
 
     document.dispatchEvent(new CustomEvent('site-components:loaded'));
   } catch (error) {
