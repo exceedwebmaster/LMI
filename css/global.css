@@ -12,6 +12,8 @@
   font-family: "Lunasima";
 }
 
+
+
 :root {
   /*Color Variable*/
   --primary-color: #585858;
@@ -230,6 +232,7 @@
 .navbar {
   background: transparent;
   z-index: 999;
+
 }
 
 nav > div {
@@ -419,6 +422,8 @@ nav div {
     position: absolute !important;
   }
 }
+
+
 
 @media (min-width: 1200px) {
 
