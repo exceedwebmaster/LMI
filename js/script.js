@@ -115,7 +115,7 @@ function applyStandardNavbarVariant(nav, pageFile) {
   const logoImg = nav.querySelector('.navbar-brand img');
 
   const defaultVariant = {
-    navClass: 'navbar bg-white w-100 top-0 navbar-expand-xl p-3 ',
+    navClass: 'navbar position-fixed bg-white w-100 top-0 navbar-expand-xl p-3 ',
     containerClass: 'container-fluid d-flex p-0 ',
     listClass: 'navbar-nav me-auto mb-2 mb-lg-0 w-100 d-flex justify-content-end',
     navStyle: '',
@@ -139,14 +139,14 @@ function applyStandardNavbarVariant(nav, pageFile) {
       specialtyDropdownClass: 'dropdown border-none specialty-dropdown ',
     },
     'contact.html': {
-      navClass: 'navbar  bg-white w-100 top-0 navbar-expand-xl p-3 contact-nav-border',
+      navClass: 'navbar position-fixed bg-white w-100 top-0 navbar-expand-xl p-3 contact-nav-border',
       containerClass: 'container-fluid d-flex p-0 ',
       listClass: 'navbar-nav me-auto mb-2 mb-lg-0 w-100 d-flex justify-content-end ',
     },
     'specialty-products.html': {
-      navClass: 'navbar position-fixed bg-white w-100 top-0 navbar-expand-xl p-3 ',
+      navClass: 'navbar position-fixed b  g-white w-100 top-0 navbar-expand-xl p-3 ',
     },
-    'privacy-policy.html': {
+    'privacy-policy.html': {  
       navClass: 'navbar  bg-white w-100 top-0 navbar-expand-xl p-3 ',
       navStyle: 'background: linear-gradient(to bottom, #404040, #A6A6A6);',
     },
