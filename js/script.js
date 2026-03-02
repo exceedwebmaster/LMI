@@ -131,7 +131,7 @@ function applyStandardNavbarVariant(nav, pageFile) {
       logoAos: 'fade-right',
     },
     'about.html': {
-      navClass: 'navbar bg-white w-100 top-0 navbar-expand-xl p-3',
+      navClass: 'navbar position-fixed bg-white w-100 top-0 navbar-expand-xl p-3',
       containerClass: 'container-fluid d-flex p-0 ',
       listClass: 'navbar-nav me-auto mb-2 mb-lg-0 w-100 d-flex justify-content-end',
       navId: 'top-page',
@@ -144,7 +144,7 @@ function applyStandardNavbarVariant(nav, pageFile) {
       listClass: 'navbar-nav me-auto mb-2 mb-lg-0 w-100 d-flex justify-content-end ',
     },
     'specialty-products.html': {
-      navClass: 'navbar position-absolute bg-white w-100 top-0 navbar-expand-xl p-3 ',
+      navClass: 'navbar position-fixed bg-white w-100 top-0 navbar-expand-xl p-3 ',
     },
     'privacy-policy.html': {
       navClass: 'navbar  bg-white w-100 top-0 navbar-expand-xl p-3 ',

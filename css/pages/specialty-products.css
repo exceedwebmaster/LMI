@@ -1,3 +1,18 @@
+/* ======= FIXED NAVBAR OFFSET ======= */
+/* Prevents page content from being hidden behind fixed navbar */
+body {
+  /* padding-top: 80px - Adds top spacing to accommodate fixed navbar */
+  /* keeps content below navbar and navbar stays fixed when scrolling */
+  padding-top: 80px;
+}
+
+@media (max-width: 768px) {
+  body {
+    /* Reduced padding on mobile devices */
+    padding-top: 70px;
+  }
+}
+
 /* Specialty Products */
 /* Section 1  */
 /* .initial-landing-specialty-products {
