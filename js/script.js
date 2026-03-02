@@ -26,6 +26,23 @@ accordionItems.forEach(item => {
   });
 });
 
+// ================= HEADER COLOR CHANGE ON SCROLL =================
+/* Dynamically changes navbar background color based on scroll position */
+/* Helps navbar blend with different section backgrounds */
+window.addEventListener('scroll', function() {
+  const navbar = document.querySelector('.navbar');
+  
+  if (!navbar) return;
+  
+  /* If user scrolled more than 100px down, change navbar background */
+  if (window.scrollY > 100) {
+    navbar.style.background = '#F2F4F5';
+  } else {
+    /* Reset to transparent when near top of page */
+    navbar.style.background = 'transparent';
+  }
+});
+
 // ================= Shared Navbar/Footer Components =================
 function getCurrentPageFile() {
   const rawPath = (window.location.pathname || '').toLowerCase();
@@ -106,7 +123,7 @@ function applyStandardNavbarVariant(nav, pageFile) {
 
   const variantByPage = {
     'index.html': {
-      navClass: 'navbar position-absolute w-100 top-0 navbar-expand-xl p-3 p-xl-5 ',
+      navClass: 'navbar position-fixed w-100 top-0 navbar-expand-xl p-3 p-xl-3 ',
       containerClass: 'container-fluid d-flex  p-0 ',
       listClass: 'navbar-nav navbar-nav-home me-auto mb-2 mb-lg-0 p-2 w-100 d-flex justify-content-end',
       productsDropdownClass: 'dropdown border-none products-dropdown',

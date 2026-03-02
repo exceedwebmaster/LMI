@@ -32,16 +32,18 @@
 }
 /* Section 2 */
 .section-2-about h1 {
-  max-width: 30%;
+  max-width: 70%;
+  border-bottom: 0.2px solid rgba(187, 186, 186, 0.914);
+  padding-bottom: 20px;
 }
 
 .section-2-about h2 {
-  max-width: 33%;
+ font-size: 18px;
 }
 
 /* Section 3 */
 .section-3-about p {
-  max-width: 750px !important;
+  max-width: 800px !important;
 }
 
 /* Section 4 */
@@ -72,7 +74,12 @@
 
 /* Section 7  */
 .section-7-about h2 {
-  max-width: 30%;
+  max-width: 40%;
+}
+
+.section-7-about h3{
+  font-size: 40px;
+ letter-spacing:  1px;
 }
 
 .section-7-about .team-line div {

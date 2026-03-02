@@ -232,7 +232,9 @@
 .navbar {
   background: transparent;
   z-index: 999;
-
+  position: fixed;
+  /* transition: Smooth color change when navbar background updates on scroll */
+  transition: background 0.3s ease;
 }
 
 nav > div {
