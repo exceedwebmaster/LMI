@@ -1,0 +1,353 @@
+/* Index Page */
+/* Section 1 */
+.initial-landing {
+  background-image: url("/assets/images/index/home-landing-image.webp");
+  background-position: center;
+  background-size: cover;
+}
+
+.initial-landing > div:first-of-type > h3 {
+  text-shadow: 0 0 5px white
+}
+
+.index-hero-1 {
+  margin-top: 250px;
+  padding-left: 5%;
+}
+
+.index-hero-1 h1 {
+  max-width: 850px; 
+  text-shadow: 0 0 10px white; 
+}
+
+
+.index-hero-2 {
+  position: absolute;
+  bottom: 40px;
+  right: 6%;
+  text-shadow: 0 0 5px black;
+  background-color: rgba(64, 64, 64, 0.3);
+}
+
+
+
+@media (max-width: 530px) {
+  .index-hero-1 {
+    display: none !important;
+  }
+}
+
+@media (min-width: 531px) {
+  .index-hero-2 {
+    display: none !important;
+  }
+}
+
+.explore-landing {
+  position: absolute;
+  bottom: 3%;
+  right: 3%;
+}
+
+@media(max-width: 530px) {
+  .explore-landing {
+    bottom: 0px;
+  }
+}
+
+/* Section 2 */
+.section-2 {
+  background-color: var(--primary-color);
+}
+
+.section-2 > div:first-of-type h2 {
+  max-width: 20%;
+}
+
+.section-2 > div:first-of-type a {
+  border: 1px solid white; 
+  width: 40% !important;
+  max-width: 175px;
+}
+
+.section-2 > div:nth-of-type(2) div:first-of-type {
+  max-width: 20%;
+}
+
+.about-us-button{
+  border: 1px solid white; 
+  white-space: nowrap;
+}
+
+.integrity {
+  width: 88%;
+  max-width: 786px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Section 3 */
+.explore-products {
+  background: linear-gradient(to bottom, #404040 50%, #A6A6A6 100%);
+}
+.explore-products img{
+  width: 100%;
+}
+@media(min-width: 1200px) {
+  .explore-products img {
+    width: 95%;
+  }
+}
+.explore-product-text{
+  max-width: 60%;
+}
+.shower-enclosures-text-description{
+  max-width: 450px;
+}
+.wardrobe-doors-description{
+  max-width: 450px;
+}
+
+.mirror-frames-led-description {
+  max-width: 510px;
+  
+}
+.product-offerings {
+  max-width: 1300px;
+  width: 88%;
+  margin-inline: auto;
+}
+@media(min-width: 768px) {
+  .why-trust-lmi {
+    /* max-width: 1266px; */
+    width: 96%;
+    margin-inline: auto;
+  }
+}
+
+
+.specialty-products-services-image {
+  width: 88%;
+  margin-inline: auto;
+}
+
+@media(min-width: 1600px) {
+  .specialty-products-services-image {
+    margin-left: 13%;
+    margin-right: 5%;
+    width: auto;
+  }
+}
+
+
+
+
+
+/* Section 4 */
+.section-4 {
+  background-color: var(--primary-color);
+}
+
+.specialty-img {
+  user-select: none;
+  /* Prevents text selection cursor */
+  pointer-events: none;
+  /* Disables right-click, drag, etc. */
+  -webkit-user-drag: none;
+  /* Prevents drag on WebKit browsers */
+}
+
+.section-4 > div > div:first-of-type h2{
+  max-width: 50%;
+}
+
+.section-4 .homes-row .homes-text{
+  background-color: #939393;
+}
+
+.section-4 > div > p{
+  max-width: 755px; 
+  margin-top: 5em !important;
+}
+
+.section-4 > div > a{
+  border: 1px solid white;
+  max-width: 300px;
+}
+
+/* Section 5 */
+.section-5 {
+  background-color: var(--tertiary-color);
+}
+
+.section-5 > div > h2 {
+  max-width: 40%;
+}
+
+#carouselExample button span:first-child{
+  padding: 13% !important;
+}
+
+.lmi-contact input::placeholder,
+.lmi-contact textarea::placeholder {
+
+  opacity: 1;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+}
+
+.lmi-contact input,
+.lmi-contact textarea {
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-bottom: 2px solid black;
+  color: white;
+}
+
+.lmi-contact button,
+.rawring {
+
+  width: 50%;
+  border: none;
+}
+
+.lmi-contact input:focus,
+.lmi-contact textarea:focus {
+  border: 1px solid #4A5509 !important;
+  outline: none;
+  /* background-color: red !important; */
+
+}
+
+.trade-partner-section,
+.contact-form-section {
+  background-color: #585858 !important;
+}
+
+/* Section 6 */
+.section-6 > div > div > .carousel-inner .carousel-item p:nth-of-type(1){
+  max-width: 900px; 
+  color: #d0d0d0;
+}
+
+.section-6 > div > div > .carousel-inner .carousel-item p:nth-of-type(2){
+  color: #939393;
+}
+
+.section-6 #carouselExampleDark{
+  min-height: 350px;
+}
+
+.contact-form-section {
+  background-color: #404040;
+  padding-inline: 9%;
+  padding-top: 7%;
+  padding-bottom: 7%;
+}
+
+.contact-form-section > div:nth-of-type(1) h3{
+  max-width: 800px; 
+  margin-bottom: 7%;
+}
+
+.contact-form-section button {
+  background-color: #4A5509;
+}
+
+
+
+
+
+/* home */
+
+
+
+
+.home-2nd-section {
+  margin-top: 0%;
+  margin-left: 20%;
+}
+
+@media(min-width: 993px) {
+  .home-2nd-section {
+    margin-top: 26% !important;
+    margin-left: 0%;
+
+  }
+}
+
+.loader-logo-wrap{
+  position: relative;
+  width: 220px;           /* adjust to your desired box size */
+  height: 140px;
+  display: grid;
+  place-items: center;
+}
+
+.loader-logo-img{
+  width: 160px;           /* logo size */
+  height: auto;
+  display: block;
+  z-index: 2;
+}
+
+/* The animated frame (your style) */
+.loader-frame{
+  position: absolute;
+  inset: 0;
+  border-radius: 10px;    /* optional */
+  --c: no-repeat linear-gradient(#000 0 0); /* change color here */
+
+  background:
+    var(--c) 0 38px,
+    var(--c) right 18px bottom 18px,
+    var(--c) right 18px top    18px,
+    var(--c) 18px 18px,
+    var(--c) 18px 100%,
+    var(--c) 100% 100%,
+    var(--c) 100% 0,
+    var(--c) 0 0;
+
+  animation:
+    l8-1 2s infinite,
+    l8-2 2s infinite;
+}
+
+
+/* Fullscreen overlay */
+.loader-overlay{
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;          /* change if you want */
+  z-index: 9999;
+}
+
+/* Hide animation (fade out) */
+.loader-overlay.is-hidden{
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 250ms ease, visibility 250ms ease;
+}
+
+/* Your loader */
+.loader {
+  width: 60px;
+  aspect-ratio: 1;
+  --g: conic-gradient(from -90deg at 10px 10px,#000 90deg,#0000 0);
+  background: var(--g), var(--g), var(--g);
+  background-size: 50% 50%;
+  animation: l18 1s infinite;
+}
+
+@keyframes l18 {
+  0%   {background-position:0     0, 10px 10px, 20px 20px}
+  33%  {background-position:-30px 0, 10px 10px, 20px 20px}
+  66%  {background-position:-30px 0, 10px 40px, 20px 20px}
+  100% {background-position:-30px 0, 10px 40px, 50px 20px}
+}

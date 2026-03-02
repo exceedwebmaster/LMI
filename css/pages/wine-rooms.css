@@ -1,0 +1,29 @@
+/* Wine Rooms Page */
+/* Section 1 */
+.initial-landing-wine-rooms {
+  background-image: url("/assets/images/wine-rooms/Wine\ Cellars\ 1.webp");
+  background-position: center;
+  background-size: cover;
+}
+
+.section-2-wine h1, .section-2-wine h2 {
+  max-width: 30%;
+}
+
+.section-3-wine p {
+  max-width: 750px !important;
+}
+
+.section-4-wine {
+  background-color: #4A5509;
+  padding-inline: 0%;
+  padding-top: 4%;
+  padding-bottom: 4%;
+}
+
+.section-4-wine p {
+  max-width: 1200px;
+}
+
+
+
