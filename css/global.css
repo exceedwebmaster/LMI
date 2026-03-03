@@ -274,7 +274,7 @@ nav > div {
 
 @media(max-width: 1199px) {
   .navbar-nav-home {
-    background-color: rgba(64, 64, 64, 0.3);
+    background-color: rgb(242, 244, 245);
   }
 }
 

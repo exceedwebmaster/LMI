@@ -9,7 +9,7 @@ body {
 @media (max-width: 768px) {
   body {
     /* Reduced padding on mobile devices */
-    padding-top: 70px;
+    padding-top: 110px;
   }
 }
 

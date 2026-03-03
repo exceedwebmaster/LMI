@@ -98,7 +98,48 @@
   margin-inline: auto;
   width: 40%;
   max-width: 370px;
+  transition: background-color .25s ease-in-out,
+              transform .25s ease-in-out,
+              box-shadow .25s ease-in-out;
 }
+
+.section-7-about a p {
+  transition: color .35s ease-in-out;
+}
+
+.section-7-about a img {
+  transition: transform .35s ease-in-out;
+}
+
+.section-7-about a:hover {
+  background-color: #fdfdfd;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 10px rgba(0,0,0,.2);
+}
+
+.section-7-about a:hover p {
+  color: #000;
+}
+
+.section-7-about a:hover img {
+  transform: translateX(3px);
+}
+
+@media (hover: none) {
+  .section-7-about a:hover {
+    background-color: transparent;
+    transform: none;
+    box-shadow: none;
+  }
+  .section-7-about a:hover p {
+    color: inherit;
+  }
+  .section-7-about a:hover img {
+    transform: none;
+  }
+}
+
+
 
 .corporate-facility-section .warehouse-description{
   max-width: 416px;
