@@ -1,6 +1,8 @@
 // ================= Accordion =================
+// Accordion hover event bindings
 const accordionItems = document.querySelectorAll('.accordionItem');
 accordionItems.forEach(item => {
+  // Accordion expand on hover
   item.addEventListener('mouseenter', function () {
     const accordionDescription = this.querySelector('.accordionDescription');
     const plusIcon = this.querySelector('.plusIcon');
@@ -13,6 +15,7 @@ accordionItems.forEach(item => {
     if (minusIcon) minusIcon.style.display = 'block';
   });
 
+  // Accordion collapse on leave
   item.addEventListener('mouseleave', function () {
     const accordionDescription = this.querySelector('.accordionDescription');
     const plusIcon = this.querySelector('.plusIcon');
@@ -27,6 +30,7 @@ accordionItems.forEach(item => {
 });
 
 // ================= HEADER COLOR CHANGE ON SCROLL =================
+// Navbar background color on scroll
 /* Dynamically changes navbar background color based on scroll position */
 /* Helps navbar blend with different section backgrounds */
 window.addEventListener('scroll', function() {
@@ -44,6 +48,7 @@ window.addEventListener('scroll', function() {
 });
 
 // ================= Shared Navbar/Footer Components =================
+// Get current page filename
 function getCurrentPageFile() {
   const rawPath = (window.location.pathname || '').toLowerCase();
   const normalizedPath = rawPath.replace(/\\/g, '/');
@@ -57,6 +62,7 @@ function getCurrentPageFile() {
   return lastSegment;
 }
 
+// Fetch partial with path fallback
 async function fetchPartialWithFallback(filename) {
   const candidates = [
     `components/${filename}`,
@@ -80,6 +86,7 @@ async function fetchPartialWithFallback(filename) {
   throw lastError || new Error(`Unable to load partial: ${filename}`);
 }
 
+// Update footer year values
 function updateFooterYears() {
   const year = new Date().getFullYear();
   const yearEl = document.getElementById('year');
@@ -89,6 +96,7 @@ function updateFooterYears() {
   if (yearMobileEl) yearMobileEl.textContent = year;
 }
 
+// Disable AOS on injected footer
 function makeInjectedFooterAlwaysVisible(footerRoot) {
   if (!footerRoot) return;
 
@@ -106,6 +114,7 @@ function makeInjectedFooterAlwaysVisible(footerRoot) {
   });
 }
 
+// Apply standard navbar classes
 function applyStandardNavbarVariant(nav, pageFile) {
   if (!nav) return;
 
@@ -196,6 +205,7 @@ function applyStandardNavbarVariant(nav, pageFile) {
   }
 }
 
+// Apply resources navbar modifications
 function applyResourcesNavbarVariant(nav) {
   if (!nav) return;
 
@@ -255,6 +265,7 @@ function applyResourcesNavbarVariant(nav) {
       .join('');
   }
 
+  // Replace specialty dropdown with link
   if (specialtyItem) {
     const specialtyPlainItem = document.createElement('li');
     specialtyPlainItem.className = 'nav-item ';
@@ -265,6 +276,7 @@ function applyResourcesNavbarVariant(nav) {
     navList.replaceChild(specialtyPlainItem, specialtyItem);
   }
 
+  // Insert resources nav item
   const resourcesItem = document.createElement('li');
   resourcesItem.className = 'nav-item';
   resourcesItem.innerHTML = '<a class="nav-link fw-medium font-lato font-size-18" href="/html/resources.html">RESOURCES</a>';
@@ -280,6 +292,7 @@ function applyResourcesNavbarVariant(nav) {
   }
 }
 
+// Route navbar variant selection
 function applyNavbarVariant(nav) {
   if (!nav) return;
 
@@ -292,6 +305,7 @@ function applyNavbarVariant(nav) {
   applyStandardNavbarVariant(nav, pageFile);
 }
 
+// Inject shared navbar and footer
 async function injectSharedComponents() {
   const navbarTarget = document.getElementById('site-navbar');
   const footerTarget = document.getElementById('site-footer');
@@ -330,10 +344,13 @@ async function injectSharedComponents() {
   }
 }
 
+// DOM ready initializers
 document.addEventListener('DOMContentLoaded', () => {
   injectSharedComponents();
   initLandingParallax();
 });
+
+// Landing parallax scroll effect
 function initLandingParallax() {
   const landing = document.getElementById('landing');
   if (!landing) return;
@@ -360,10 +377,12 @@ function initLandingParallax() {
 
 
 // ================= Update Year =================
+// Update footer years on load
 updateFooterYears();
 
 
 // ================= Product Footer Button =================
+// Toggle products footer accordion
 const productFooterBtn = document.querySelector('.product-footer-button');
 if (productFooterBtn) {
   productFooterBtn.addEventListener('click', function (event) {
@@ -379,6 +398,7 @@ if (productFooterBtn) {
 }
 
 // ================= Fancybox =================
+// Fancybox image zoom toggle setup
 if (typeof Fancybox !== "undefined") {
   Fancybox.bind("[data-fancybox]", {
     Images: {
@@ -410,10 +430,17 @@ if (typeof Fancybox !== "undefined") {
 }
 
 // ================= Email =================
+// Email form submit handler
 function sendEmail(e) {
   e.preventDefault();
+  const nameInput = document.querySelector("#user-name");
+  const companyInput = document.querySelector("#user-company");
+  const positionInput = document.querySelector("#user-position");
   const emailInput = document.querySelector("#user-email");
   const phoneInput = document.querySelector("#user-phone");
+  const nameValue = nameInput?.value.trim() || "";
+  const companyValue = companyInput?.value.trim() || "";
+  const positionValue = positionInput?.value.trim() || "";
   const emailValue = emailInput?.value.trim() || "";
   const phoneValue = phoneInput?.value.trim() || "";
 
@@ -437,11 +464,15 @@ function sendEmail(e) {
   }
 
   const templateParams = {
-    firstname: document.querySelector("#first-name")?.value.trim() || "",
-    lastname: document.querySelector("#last-name")?.value.trim() || "",
+    name: nameValue,
+    company: companyValue,
+    position: positionValue,
     useremail: emailValue,
     userphone: phoneValue,
     usermessage: document.querySelector("#user-message")?.value.trim() || "",
+    // Backward-compatible keys for existing EmailJS templates
+    firstname: nameValue,
+    lastname: companyValue,
   };
 
   if (typeof emailjs !== "undefined") {
@@ -453,6 +484,7 @@ function sendEmail(e) {
 }
 
   // Measure nav and set global offset so normal hash jumps also respect it
+  // Set scroll padding from navbar height
   function applyScrollPadding() {
     const nav = document.querySelector('nav');
     const h = nav ? nav.offsetHeight : 0;
@@ -460,6 +492,7 @@ function sendEmail(e) {
   }
 
   // Scroll to the element AFTER layout is stable
+  // Smooth scroll to hash with offset
   function scrollToHashWithOffset() {
     const hash = window.location.hash;
     if (!hash) return;
@@ -479,6 +512,7 @@ function sendEmail(e) {
   }
 
   // Handle normal load, BFCache restore, and resizes
+  // Hash jump handling on load/restore
   window.addEventListener('load', () => {
     applyScrollPadding();
     scrollToHashWithOffset();
@@ -490,7 +524,3 @@ function sendEmail(e) {
       scrollToHashWithOffset();
     }
   });
-
-
-  
-
