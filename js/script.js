@@ -143,7 +143,7 @@ function applyStandardNavbarVariant(nav, pageFile) {
       containerClass: 'container-fluid d-flex p-0 ',
       listClass: 'navbar-nav me-auto mb-2 mb-lg-0 w-100 d-flex justify-content-end ',
     },
-    'specialty-products.html': {
+    'expertise.html': {
       navClass: 'navbar position-fixed b  g-white w-100 top-0 navbar-expand-xl p-3 ',
     },
     'privacy-policy.html': {  
@@ -259,8 +259,8 @@ function applyResourcesNavbarVariant(nav) {
     const specialtyPlainItem = document.createElement('li');
     specialtyPlainItem.className = 'nav-item ';
     specialtyPlainItem.innerHTML = `
-      <a class="nav-link fw-medium font-lato font-size-18 text-xl-center" href="/html/specialty-products.html">SPECIALTY PRODUCTS
-              + SERVICES</a>
+      <a class="nav-link fw-medium font-lato font-size-18 text-xl-center" href="/html/expertise.html">EXPERTISE
+             </a>
     `;
     navList.replaceChild(specialtyPlainItem, specialtyItem);
   }
