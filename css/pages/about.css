@@ -281,7 +281,8 @@
   max-width: 300px;
   font-size: clamp(14px, 0.92vw, 17px);
   line-height: 1.58;
-  margin: 0;
+  margin-bottom: 70px;
+  margin-left: 70px;
   color: #4a4a4a;
 }
 
