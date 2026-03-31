@@ -7,6 +7,10 @@
   background: none;
 }
 
+.initial-landing-enclosures-mobile-image {
+  display: none;
+}
+
 /* Enclosures background layer */
 .initial-landing-enclosures::before {
   content: "";
@@ -29,6 +33,24 @@
 /* Optional: same h3 shadow style (only if your enclosures section has this structure) */
 .initial-landing-enclosures > div:first-of-type > h3 {
   text-shadow: 0 0 5px white;
+}
+
+@media (max-width: 1199px) {
+  .initial-landing-enclosures {
+    height: auto !important;
+    min-height: 0;
+    overflow: visible;
+  }
+
+  .initial-landing-enclosures::before {
+    content: none;
+  }
+
+  .initial-landing-enclosures-mobile-image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
 }
 
 .section-3-enclosures p {

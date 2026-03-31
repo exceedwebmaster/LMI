@@ -4,6 +4,11 @@
   background-image: url("/assets/images/mirrors+frames/mirror-landing-bg.webp");
   background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.initial-landing-mirrors-mobile-image {
+  display: none;
 }
 
 .section-2-mirrors h1, .section-2-mirrors h2 {
@@ -115,6 +120,18 @@
 
 /* Responsive gallery behavior */
 @media (max-width: 1199px) {
+  .initial-landing-mirrors {
+    background-image: none;
+    height: auto !important;
+    min-height: 0;
+  }
+
+  .initial-landing-mirrors-mobile-image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
   .section-5-mirrors .row {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
