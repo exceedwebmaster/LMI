@@ -4,6 +4,11 @@
   background-image: url("/assets/images/room-dividers/15\ -\ Page\ 17\ 1.webp");
   background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.initial-landing-room-dividers-mobile-image {
+  display: none;
 }
 
 .section-2-room h1, .section-2-room h2 {
@@ -175,6 +180,20 @@
 .top-hung-container a:nth-of-type(5) {
   grid-column: 3/4;
   grid-row: 4/7;
+}
+
+@media (max-width: 1199px) {
+  .initial-landing-room-dividers {
+    background-image: none;
+    height: auto !important;
+    min-height: 0;
+  }
+
+  .initial-landing-room-dividers-mobile-image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
 }
 
 /* Responsive gallery and feature list behavior */

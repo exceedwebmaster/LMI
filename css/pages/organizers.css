@@ -4,6 +4,11 @@
   background-image: url("/assets/images/organizers/organizers-landing-page.webp");
   background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.initial-landing-organizers-mobile-image {
+  display: none;
 }
 
 .section-2-organizers h1 , .section-2-organizers h2 {
@@ -114,6 +119,20 @@
 }
 
 /* Responsive gallery collapse */
+@media (max-width: 1199px) {
+  .initial-landing-organizers {
+    background-image: none;
+    height: auto !important;
+    min-height: 0;
+  }
+
+  .initial-landing-organizers-mobile-image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
 @media (max-width: 991px) {
   .organizers-container,
   .shelving-container {

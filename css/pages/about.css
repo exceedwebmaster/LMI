@@ -4,6 +4,11 @@
   background-image: url("/assets/images/about/LMI\ Shop\ 1\ 1.webp");
   background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.initial-landing-about-mobile-image {
+  display: none;
 }
 
 /* Section 2 */
@@ -65,6 +70,20 @@
 
 .about-copy-list li:last-child {
   margin-bottom: 0;
+}
+
+@media (max-width: 1199px) {
+  .initial-landing-about {
+    background-image: none;
+    height: auto !important;
+    min-height: 0;
+  }
+
+  .initial-landing-about-mobile-image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
 }
 
 @media (max-width: 991px) {

@@ -3,6 +3,11 @@
   background-image: url("/assets/images/wardrobe-doors/wardrobe-landing-img.webp");
   background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.initial-landing-wardrobe-doors-mobile-image {
+  display: none;
 }
 
 .section-3-wardrobe-doors span,
@@ -92,6 +97,18 @@
 }
 
 @media (max-width: 991px) {
+  .initial-landing-wardrobe-doors {
+    background-image: none;
+    height: auto !important;
+    min-height: 0;
+  }
+
+  .initial-landing-wardrobe-doors-mobile-image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
   .section-2-wardrobe h1,
   .section-2-wardrobe h2 {
     max-width: 100%;
